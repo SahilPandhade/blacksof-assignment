@@ -6,7 +6,7 @@ const Footer = () => {
         <div className={`mt-12 pb-10`}>
             <div className='flex flex-col justify-between gap-5 '>
                 <div className='flex justify-center'>Leading the charge for industries!</div>
-                <div className='flex flex-row gap-2'>
+                <div className='flex flex-row gap-2 rounded-2xl'>
                     {[...Array(10)].map((_, index) => (
                         <CompanyLogo key={index} />
                     ))}
