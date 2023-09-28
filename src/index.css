@@ -22,17 +22,7 @@
 }
 
 @media (max-width: 720px) {
-  .nav{
-    font-size: 12px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .navList{
-    font-size: 12px;
-    gap:2;
-  }
+
   .sm-screen {
     font-size: 12px;
   }
