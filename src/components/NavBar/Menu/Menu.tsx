@@ -1,8 +1,7 @@
-import { faBars } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react'
 import { navLinks } from '../../../constants';
 import { useNavigate } from 'react-router-dom';
+import IMAGES from '../../../assets';
 interface MenuProps {
     toggle: boolean,
     setToggle: React.Dispatch<React.SetStateAction<boolean>>,
@@ -14,7 +13,9 @@ const Menu = ({ toggle, setToggle, active, setActive }: MenuProps) => {
     const navigate = useNavigate()
     return (
         <div className='sm:hidden flex flex-1 justify-end items-center'>
-            <FontAwesomeIcon icon={faBars} className='w-[28px] h-[28px] object-contain cursor-pointer' onClick={() => { setToggle(!toggle) }} />
+            <div  className='w-[32px] h-[32px]  object-contain cursor-pointer' onClick={() => { setToggle(!toggle) }}><img className='rounded-md' src={IMAGES.menu}></img>
+            </div>
+            {/* <FontAwesomeIcon icon={faBars} className='w-[28px] h-[28px] object-contain cursor-pointer' onClick={() => { setToggle(!toggle) }} /> */}
             <div className={`${!toggle ? 'hidden' : 'flex'} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}>
                 <ul className='list-none flex justify-end items-start flex-col gap-4'>
                     {
